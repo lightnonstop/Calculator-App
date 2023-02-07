@@ -1,0 +1,108 @@
+:root{
+/*  Backgrounds */
+
+--Very-dark-desaturated-blue1: hsl(222, 26%, 31%); /* main background */
+--Very-dark-desaturated-blue2 : hsl(223, 31%, 20%); /* toggle background, keypad background */
+--Very-dark-desaturated-blue3: hsl(224, 36%, 15%); /* screen background */
+
+/* Keys */
+
+--Desaturated-dark-blue1 : hsl(225, 21%, 49%);/* key background */
+--Desaturated-dark-blue2 : hsl(224, 28%, 35%); /* key shadow */
+
+--Red: hsl(6, 63%, 50%); /* key background, toggle */
+--Dark-red: hsl(6, 70%, 34%);  /* key shadow */
+
+--Light-grayish-orange: hsl(30, 25%, 89%); /* key background */
+--Grayish-orange: hsl(28, 16%, 65%); /* key shadow */
+
+/* Text */
+
+--Very-dark-grayish-blue: hsl(221, 14%, 31%);
+--White-text: #fff;
+
+}
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "League Spartan", monospace;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-desaturated-blue1);
+}
+div{
+    border-radius: 4px;
+}
+#container{
+    width: 85%;
+    max-width: 500px;
+    min-height: 0vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    gap: 1.7rem;
+}
+#display{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+    background-color: var(--Very-dark-desaturated-blue3);
+}
+#print{
+    color: var(--White-text);
+    direction: rtl;
+    padding: 1.4rem;
+    width: 100%;
+}
+.keys, #print{
+    font-size: 4.4rem;
+    font-weight: 700;
+}
+.keys{
+    font-size: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    background-color: var(--Light-grayish-orange);
+    user-select: none;
+}
+#wrap-keys{
+    background-color: var(--Very-dark-desaturated-blue2);
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+#reset{
+    grid-column: 1 / span 2;
+}
+#equal{
+    grid-column: span 2 / -1;
+    background-color: var(--Red);
+    font-size: 2.5rem;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.white{
+    color: var(--White-text, #fff);
+}
+.saturated-dark-blue{
+    background-color: var(--Desaturated-dark-blue1);
+    font-size: 2.5rem;
+}
