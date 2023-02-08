@@ -52,30 +52,42 @@ div{
     gap: 1.7rem;
 }
 #display{
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    gap: 0.1rem;
     padding: 1.4rem;
     background-color: var(--Very-dark-desaturated-blue3);
 }
-#print{
+#primary-screen, #secondary-screen{
     color: var(--White-text);
     direction: rtl;
     padding: 1.4rem;
     width: 100%;
+    font-size: 2.4rem;
+    display: flex;
+    align-items: center;
 }
-.keys, #print{
+#secondary-screen{
+    justify-content: flex-end;
+    height: 40px;
+}
+#primary-screen{
+    height: 70px;
+}
+.keys, #primary-screen{
     font-size: 4.4rem;
     font-weight: 700;
 }
 .keys{
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.2rem 0;
+    padding: 1.4rem 0;
     cursor: pointer;
     background-color: var(--Light-grayish-orange);
     user-select: none;
@@ -86,7 +98,7 @@ div{
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    gap: 0.5rem;
 }
 #reset{
     grid-column: 1 / span 2;
