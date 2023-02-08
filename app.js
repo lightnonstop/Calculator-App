@@ -61,7 +61,7 @@ operators.forEach((operator) =>
 equal.addEventListener("click", (e) => {
   operateWhenEqual();
   primaryScreen.textContent = previousVal;
-  if (previousVal.length <= 8) primaryScreen.textContent = previousVal;
+  if (previousVal.length <= 9) primaryScreen.textContent = previousVal;
   else {
     primaryScreen.textContent = ".." + previousVal.slice(0, 16);
   }
