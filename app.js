@@ -5,11 +5,9 @@ let updateScreen = "";
 
 const allElements = document.querySelectorAll("*");
 
-console.log(
-  allElements.forEach((element) => {
-    element.style.userSelect = "none";
-  })
-);
+allElements.forEach((element) => {
+  element.style.userSelect = "none";
+})
 
 /* Stores document elements */
 const primaryScreen = document.querySelector("#primary-screen");
