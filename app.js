@@ -11,7 +11,7 @@ console.log(
   })
 );
 
-/* Stores document element */
+/* Stores document elements */
 const primaryScreen = document.querySelector("#primary-screen");
 const secondaryScreen = document.querySelector("#secondary-screen");
 const digits = document.querySelectorAll(".digit");
@@ -63,7 +63,7 @@ equal.addEventListener("click", (e) => {
   primaryScreen.textContent = previousVal;
   if (previousVal.length <= 10) primaryScreen.textContent = previousVal;
   else {
-    primaryScreen.textContent = "..." + previousVal.slice(0, 13);
+    primaryScreen.textContent = `...${previousVal.slice(0, 13)}`;
   }
 });
 
